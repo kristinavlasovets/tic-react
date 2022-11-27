@@ -23,7 +23,7 @@ export const Join = ({setIsAuth, client, user}) => {
 					Logout
 				</Button>
 
-				<JoinGame user={user} />
+				<JoinGame user={user} handleLogout={handleLogout} />
 			</Chat>
 		</Box>
 	);

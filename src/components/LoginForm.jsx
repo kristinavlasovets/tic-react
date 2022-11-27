@@ -32,6 +32,7 @@ export const LoginForm = ({setIsAuth}) => {
 			<TextField
 				sx={{m: '0 auto', width: 200}}
 				onChange={(event) => setUsername(event.target.value)}
+				value={username}
 				label="Your name"
 				variant="outlined"
 			/>

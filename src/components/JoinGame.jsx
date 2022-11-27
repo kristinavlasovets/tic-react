@@ -3,7 +3,7 @@ import {useChatContext, Channel} from 'stream-chat-react';
 import {Box, Typography, TextField, Button} from '@mui/material';
 import {Game} from './Game';
 
-export const JoinGame = ({user}) => {
+export const JoinGame = ({handleLogout}) => {
 	const [opponent, setOpponent] = useState('');
 	const [channel, setChannel] = useState(null);
 
@@ -26,7 +26,7 @@ export const JoinGame = ({user}) => {
 
 	return channel ? (
 		<Channel channel={channel}>
-			<Game channel={channel} />
+			<Game channel={channel} handleLogout={handleLogout} />
 		</Channel>
 	) : (
 		<Box

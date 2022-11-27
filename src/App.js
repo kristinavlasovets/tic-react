@@ -16,7 +16,7 @@ export const App = () => {
 		} else {
 			setIsAuth(false);
 		}
-	}, [isAuth]);
+	}, [isAuth, user]);
 
 	useEffect(() => {
 		if (localStorage.getItem('token')) {
@@ -28,9 +28,11 @@ export const App = () => {
 					},
 					localStorage.getItem('token')
 				)
-				.then((user) => setUser(user));
+				.then((user) => {
+					setUser(user);
+				});
 		}
-	}, []);
+	}, [user, isAuth]);
 
 	return isAuth ? (
 		<Routes>
