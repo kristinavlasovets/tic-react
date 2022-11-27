@@ -6,11 +6,14 @@ export const LoginForm = ({setIsAuth}) => {
 
 	const handleStart = async (e) => {
 		e.preventDefault();
-		const response = await fetch('http://localhost:3001/signin', {
-			method: 'POST',
-			headers: {'Content-Type': 'application/json'},
-			body: JSON.stringify({username}),
-		});
+		const response = await fetch(
+			'https://tic-nodejs-production.up.railway.app/signin',
+			{
+				method: 'POST',
+				headers: {'Content-Type': 'application/json'},
+				body: JSON.stringify({username}),
+			}
+		);
 		const result = await response.json();
 		setIsAuth(true);
 		localStorage.setItem('token', result.token);
