@@ -20,7 +20,11 @@ export const Game = ({channel, handleLogout}) => {
 		return (
 			<Typography
 				sx={{
-					m: '5vh auto',
+					padding: 30,
+					display: 'flex',
+					justifyContent: 'center',
+					color: 'white',
+					backgroundImage: `url(${'https://cdn.dribbble.com/userupload/2840552/file/original-de1436c9f5525da0e592393bab04aade.png?compress=1&resize=1600x1200'})`,
 				}}
 				variant="h2"
 			>

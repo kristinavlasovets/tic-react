@@ -30,16 +30,18 @@ export const LoginForm = ({setIsAuth}) => {
 			onSubmit={handleStart}
 		>
 			<TextField
-				sx={{m: '0 auto', width: 200}}
+				sx={{m: '0 auto', width: 300}}
 				onChange={(event) => setUsername(event.target.value)}
 				value={username}
 				label="Your name"
 				variant="outlined"
+				color="error"
 			/>
 			<Button
-				sx={{m: '20px auto', width: 100}}
+				sx={{m: '20px auto', width: 160, height: 70, fontSize: 30}}
 				type="submit"
 				variant="contained"
+				color="error"
 			>
 				Start
 			</Button>

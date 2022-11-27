@@ -6,10 +6,14 @@ export const Square = ({chooseSquare, value}) => {
 		<Box
 			onClick={chooseSquare}
 			sx={{
-				fontSize: 50,
+				fontSize: 200,
+				fontWeight: 'light',
+				fontFamily: 'default',
+				lineHeight: '160px',
 				width: 200,
 				height: 200,
-				color: 'thistle',
+				color: 'black',
+				textAlign: 'center',
 				backgroundColor: 'whitesmoke',
 				border: '2px solid white',
 				cursor: 'pointer',

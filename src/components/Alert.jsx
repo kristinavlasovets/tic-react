@@ -1,10 +1,13 @@
 import * as React from 'react';
-import Button from '@mui/material/Button';
-import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import DialogTitle from '@mui/material/DialogTitle';
+import {
+	Box,
+	Button,
+	Dialog,
+	DialogActions,
+	DialogContent,
+	DialogContentText,
+	DialogTitle,
+} from '@mui/material';
 
 export default function Alert({
 	winner,
@@ -19,21 +22,33 @@ export default function Alert({
 	};
 	return (
 		<Dialog
+			sx={{
+				padding: 30,
+				display: 'flex',
+				justifyContent: 'center',
+				backgroundImage: `url(${'https://cdn.dribbble.com/userupload/2840552/file/original-de1436c9f5525da0e592393bab04aade.png?compress=1&resize=1600x1200'})`,
+			}}
 			open={open}
 			onClose={handleClose}
-			aria-labelledby="alert-dialog-title"
-			aria-describedby="alert-dialog-description"
 		>
-			<DialogTitle id="alert-dialog-title">
-				{'Do you want to play once again lox?'}
+			<DialogTitle sx={{width: '800px', fontSize: '32px'}}>
+				{'are you ready for the rematch?'}
 			</DialogTitle>
 			<DialogContent>
-				<DialogContentText>The winner is {winner}</DialogContentText>
+				<DialogContentText sx={{fontSize: '32px'}}>
+					the{' '}
+					<Box sx={{color: 'red'}} component="span">
+						winner
+					</Box>{' '}
+					is {winner}
+				</DialogContentText>
 			</DialogContent>
 			<DialogActions>
-				<Button onClick={handleLogout}>Nah, i leave</Button>
-				<Button onClick={handleRestart} autoFocus>
-					Yes, i kill u
+				<Button sx={{color: 'gray'}} onClick={handleLogout}>
+					No way
+				</Button>
+				<Button color="error" onClick={handleRestart} autoFocus>
+					I can do it!
 				</Button>
 			</DialogActions>
 		</Dialog>

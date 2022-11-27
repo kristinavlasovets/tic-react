@@ -15,10 +15,11 @@ export const Join = ({setIsAuth, client, user}) => {
 		<Box>
 			<Chat client={client}>
 				<Button
-					sx={{m: '20px auto', width: 100}}
+					sx={{m: '20px 20px', width: 100}}
 					type="button"
 					variant="contained"
 					onClick={handleLogout}
+					color="error"
 				>
 					Logout
 				</Button>
